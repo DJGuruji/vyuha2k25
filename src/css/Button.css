@@ -1,0 +1,23 @@
+.tktbtn{
+    background-color:  #05d5fa;
+   
+}
+.tktbtnn{
+    color:  #05d5fa;
+   
+}
+.tktbtn:hover .tktbtnn:hover{
+    background-color: #05faea;
+} 
+.bookticketbg {
+    background-color: #0F1825;
+}
+.bookticketbg .popup{
+    background-color: #23396a;
+}
+.formbody{
+    background-color: #192438;
+}
+.inputbody{
+    background-color: #0f1825;
+}
