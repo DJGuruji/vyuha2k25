@@ -15,8 +15,8 @@ const Vyuha = () => {
 
   return (
     <div className="flex justify-center items-center h-screen ">
-      <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-lg" data-aos="fade-up">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+      <div className="w-full max-w-md p-8 backdrop-blur-md rounded-xl shadow-lg" data-aos="fade-up">
+        <h2 className="text-2xl font-bold text-center text-white  mb-6">
           Are you an alumnus or from another college?
         </h2>
         <div className="flex justify-center">

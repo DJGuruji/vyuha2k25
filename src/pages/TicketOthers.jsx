@@ -91,15 +91,15 @@ const TicketOthers = () => {
 
   return (
     <div className="w-full h-full flex justify-center items-center p-5">
-      <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-lg" data-aos="fade-up">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+      <div className="w-full max-w-md p-8 backdrop-blur-lg rounded-xl shadow-lg" data-aos="fade-up">
+        <h2 className="text-2xl font-bold text-center text-white mb-6">
           Ticket Rate: &#8377; &nbsp;
           249 only
         </h2>
-        <h2 className="text-lg font-semibold text-center text-gray-800 mb-6">
+        <h2 className="text-lg font-semibold text-center text-white mb-6">
           Pay at UPI ID: example@oksbi
         </h2>
-        <h2 className="text-lg font-semibold text-center text-gray-800 mb-6">
+        <h2 className="text-lg font-semibold text-center text-white mb-6">
           Vyuha On Saturday, February 20 2025
         </h2>
         <p className="text-red-700 text-sm text-center mb-6">
@@ -107,7 +107,7 @@ const TicketOthers = () => {
         </p>
         <form onSubmit={handleSubmit} encType="multipart/form-data" method="post">
           {/* Full Name */}
-          <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+          <label htmlFor="name" className="block text-white font-semibold mb-2">
             Full Name
           </label>
           <input
@@ -120,7 +120,7 @@ const TicketOthers = () => {
           />
 
           {/* Mobile Number */}
-          <label htmlFor="mobileNumber" className="block text-gray-700 font-semibold mb-2">
+          <label htmlFor="mobileNumber" className="block text-white font-semibold mb-2">
             Mobile Number
           </label>
           <input
@@ -133,7 +133,7 @@ const TicketOthers = () => {
           />
 
           {/* Email */}
-          <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+          <label htmlFor="email" className="block text-whitefont-semibold mb-2">
             Email
           </label>
           <input
@@ -146,7 +146,7 @@ const TicketOthers = () => {
           />
 
           {/* College Name */}
-          <label htmlFor="collegeName" className="block text-gray-700 font-semibold mb-2">
+          <label htmlFor="collegeName" className="block text-white font-semibold mb-2">
             College Name
           </label>
           <input
@@ -159,7 +159,7 @@ const TicketOthers = () => {
           />
 
           {/* Photo Proof (ID Card) */}
-          <label htmlFor="photoProof" className="block text-gray-700 font-semibold mb-2">
+          <label htmlFor="photoProof" className="block text-white font-semibold mb-2">
             Upload ID Card
           </label>
           <input
@@ -171,7 +171,7 @@ const TicketOthers = () => {
           />
 
           {/* Payment Proof */}
-          <label htmlFor="paymentProof" className="block text-gray-700 font-semibold mb-2">
+          <label htmlFor="paymentProof" className="block text-white font-semibold mb-2">
             Upload Payment Screenshot
           </label>
           <input

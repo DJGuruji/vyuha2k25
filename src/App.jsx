@@ -1,20 +1,9 @@
-// App.jsx
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
-
 import Home from "./pages/Home";
 import { useAuthStore } from "./store/authStore";
-
-// Import all background images.
-import bg1 from "../src/img/bg1.png";
-import bg2 from "../src/img/bg2.png";
-import bg3 from "../src/img/bg3.jpeg";
-import bg4 from "../src/img/bg4.jpeg";
-import bg5 from "../src/img/bg5.jpeg";
-import bg6 from "../src/img/bg7.jpeg";
-import bg7 from "../src/img/bg9.jpeg";
 
 import Navbar from "./components/NavBar";
 import Contact from "./pages/Contact";
@@ -27,24 +16,48 @@ import TicketOthers from "./pages/TicketOthers";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
-import FallingAnimationOverlay from "./FallingAnimationOverlay";
+import bg1 from "../src/img/bg6.jpeg";
+import bg2 from "../src/img/bg2.jpeg";
+import bg3 from "../src/img/bg1.jpeg";
+//import bg4 from "../src/img/bg2.jpeg";
+import bg5 from "../src/img/bg3.jpeg";
+import bg6 from "../src/img/bg4.jpeg";
+import bg7 from "../src/img/bg5.jpeg";
+
+
+
+
+const bgImages = [bg1, bg2,bg3, bg5,bg6,bg7];
 
 const App = () => {
   const { user } = useAuthStore();
-  const [bgImage, setBgImage] = useState("");
+  const [bgImage, setBgImage] = useState(bg1);
   const [navbarVisible, setNavbarVisible] = useState(false);
-  const [loading, setLoading] = useState(true); 
-  const [showAnimation, setShowAnimation] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [zoomOut, setZoomOut] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      easing: "ease-in-out",
-      once: true,
-    });
+    AOS.init({ duration: 2000, easing: "ease-in-out", once: true });
+  
 
-    setLoading(false);
+    const randomIndex = Math.floor(Math.random() * bgImages.length);
+  
+    localStorage.setItem("lastBgIndex", randomIndex);
+    setBgImage(bgImages[randomIndex]);
+  
+    const img = new Image();
+    img.src = bgImages[randomIndex];
+    img.onload = () => {
+      setLoading(false);
+      setTimeout(() => setZoomOut(true), 100);
+      setTimeout(() => setNavbarVisible(true), 2000);
+    };
+    img.onerror = () => {
+      console.error(`Failed to load image: ${bgImages[randomIndex]}`);
+      setLoading(false);
+    };
   }, []);
+  
 
   if (loading) {
     return (
@@ -55,25 +68,17 @@ const App = () => {
   }
 
   return (
-    <>
-      {showAnimation && (
-        <FallingAnimationOverlay 
-          images={[bg1, bg2, bg3, bg4, bg5, bg6, bg7]} 
-          onAnimationComplete={(selectedImage) => {
-          
-            setBgImage(selectedImage);
-            setShowAnimation(false);
-            setNavbarVisible(true);
-          }}
-        />
-      )}
+    <div className="relative min-h-screen bg-black">
       <div
-        className="bg-cover bg-center bg-no-repeat min-h-screen bg-black"
+        className={`absolute inset-0 bg-cover bg-center transition-transform duration-[2s] ease-out-in ${
+          zoomOut ? "scale-[1]" : "scale-[1.5]"
+        }`}
         style={{
-        
-          backgroundImage: bgImage ? `url(${bgImage})` : "none",
+          backgroundImage: `url(${bgImage})`,
         }}
-      >
+      ></div>
+
+      <div className="relative z-10">
         <Router>
           {navbarVisible && <Navbar />}
           <Routes>
@@ -90,7 +95,7 @@ const App = () => {
           </Routes>
         </Router>
       </div>
-    </>
+    </div>
   );
 };
 
