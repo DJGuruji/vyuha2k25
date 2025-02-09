@@ -38,34 +38,34 @@ const Login = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen ">
-      <form onSubmit={onSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+      <form onSubmit={onSubmit} className="backdrop-blur-md p-6 rounded-lg shadow-md w-full max-w-sm">
+        <h2 className="text-2xl font-bold mb-6 text-center text-white">Login</h2>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="identifier">Email or Username</label>
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
-            <AiOutlineMail className="text-gray-600 mr-2" />
+          <label className="block text-white mb-2" htmlFor="identifier">Email or Username</label>
+          <div className="flex items-center border border-gray-300 rounded-md bg-white">
+            <AiOutlineMail className="text-gray-800 mr-2 text-lg ml-1" />
             <input
               type="text"
               name="identifier"
               value={identifier}
               onChange={onChange}
               required
-              className="w-full outline-none"
+              className="w-full px-3 py-2  outline-none"
               placeholder="Enter your email or username"
             />
           </div>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="password">Password</label>
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
-            <AiOutlineLock className="text-gray-600 mr-2" />
+          <label className="block text-white mb-2" htmlFor="password">Password</label>
+          <div className="flex items-center border border-gray-300 rounded-md bg-white">
+            <AiOutlineLock className="text-gray-800  mr-2 text-lg ml-1" />
             <input
               type="password"
               name="password"
               value={password}
               onChange={onChange}
               required
-              className="w-full outline-none"
+              className="w-full px-3 py-2  outline-none"
               placeholder="Enter your password"
             />
           </div>

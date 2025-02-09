@@ -56,80 +56,80 @@ const Signup = () => {
 
   return (
     <div className=" flex items-center justify-center min-h-screen ">
-      <form onSubmit={onSubmit} className="bg-white p-6 rounded-lg shadow-xl w-full max-w-sm">
-        <h2 className="text-2xl font-bold mb-6 text-center">Signup</h2>
+      <form onSubmit={onSubmit} className="backdrop-blur-md p-6 rounded-lg shadow-xl w-full max-w-sm">
+        <h2 className="text-2xl font-bold mb-6 text-center text-white ">Signup</h2>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="name">Name</label>
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
-            <AiOutlineUser className="text-gray-600 mr-2" />
+          <label className="block text-white mb-2" htmlFor="name">Name</label>
+          <div className="flex items-center border border-gray-300 rounded-md bg-white">
+            <AiOutlineUser className="text-gray-600 mr-2 text-lg ml-1" />
             <input
               type="text"
               name="name"
               value={name}
               onChange={onChange}
               required
-              className="w-full outline-none"
+              className="w-full px-3 py-2 outline-none"
               placeholder="Enter your name"
             />
           </div>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="mobile">Mobile</label>
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
-            <AiOutlinePhone className="text-gray-600 mr-2" />
+          <label className="block text-white mb-2" htmlFor="mobile">Mobile</label>
+          <div className="flex items-center border border-gray-300 rounded-md x bg-white">
+            <AiOutlinePhone className="text-gray-600 mr-2 text-lg ml-1" />
             <input
               type="text"
               name="mobile"
               value={mobile}
               onChange={onChange}
               required
-              className="w-full outline-none"
+              className="w-full px-3 py-2 outline-none"
               placeholder="Enter your mobile number"
             />
           </div>
           {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="email">Email</label>
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
-            <AiOutlineMail className="text-gray-600 mr-2" />
+          <label className="block text-white mb-2" htmlFor="email">Email</label>
+          <div className="flex items-center border border-gray-300 rounded-md bg-white">
+            <AiOutlineMail className="text-gray-600 mr-2 text-lg ml-1" />
             <input
               type="email"
               name="email"
               value={email}
               onChange={onChange}
               required
-              className="w-full outline-none"
+              className="w-full px-3 py-2 outline-none"
               placeholder="Enter your email"
             />
           </div>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="password">Password</label>
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
-            <AiOutlineLock className="text-gray-600 mr-2" />
+          <label className="block text-white mb-2" htmlFor="password">Password</label>
+          <div className="flex items-center border border-gray-300 rounded-md bg-white">
+            <AiOutlineLock className="text-gray-600 mr-2 text-lg ml-1" />
             <input
               type="password"
               name="password"
               value={password}
               onChange={onChange}
               required
-              className="w-full outline-none"
+              className="w-full px-3 py-2 outline-none"
               placeholder="Enter your password"
             />
           </div>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 mb-2" htmlFor="confirmPassword">Confirm Password</label>
-          <div className="flex items-center border border-gray-300 rounded-md px-3 py-2">
-            <AiOutlineLock className="text-gray-600 mr-2" />
+          <label className="block text-white mb-2" htmlFor="confirmPassword">Confirm Password</label>
+          <div className="flex items-center border border-gray-300 rounded-md bg-white ">
+            <AiOutlineLock className="text-gray-600 mr-2 text-lg ml-1 " />
             <input
               type="password"
               name="confirmPassword"
               value={confirmPassword}
               onChange={onChange}
               required
-              className="w-full outline-none"
+              className="w-full px-3 py-2 outline-none"
               placeholder="Confirm your password"
             />
           </div>
@@ -137,7 +137,7 @@ const Signup = () => {
         <button type="submit" className="w-full bg-blue-300 font-bold text-blue-800 border-2 border-blue-800 py-2 rounded-md hover:bg-blue-400 transition duration-200">
           {loading ? 'Signing up...' : 'Signup'}
         </button>
-        <p className="ml-7 lg:ml-9 xl:ml-9 mt-5 ">
+        <p className="ml-7 lg:ml-9 xl:ml-9 mt-5 text-white">
           Already Have An Account?{' '}
           <a onClick={() => navigate('/login')} className="text-blue-700 hover:underline hover:text-green-700 ">
             Login

@@ -45,7 +45,7 @@ const Navbar = () => {
       <Link to="/">
         <img src={logo} alt="logo" className="h-12 w-12" />
       </Link>
-      {user ? (
+      {/* {user ? (
         <Link
           to="/login"
           className="text-white border-2 border-gray-700 py-2 px-4  rounded-2xl hover:rounded-3xl "
@@ -59,7 +59,11 @@ const Navbar = () => {
         >
           Logout
         </button>
-      )}
+      )} */}
+{/* Comment the below div if you un comment the above code  */}
+      <div>
+
+      </div>
 
       <div
         className={`fixed top-20 left-0 h-screen border-gray-700 backdrop-blur-lg  inset-0 bg-black/40  p-4 shadow-lg w-screen  transform ${

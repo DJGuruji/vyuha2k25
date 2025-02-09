@@ -3,6 +3,7 @@ import fireVideo from "../assets/fire.mp4";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Carousel from "../components/Carousel";
+import Button from "../components/Button";
 
 const Home = () => {
   useEffect(() => {
@@ -59,10 +60,12 @@ const Home = () => {
         </svg>
      
       </div>
+      <Button></Button>
       <div className="flex justify-center">
       <span className="text-4xl text-white border-4 border-yellow-400 p-10 backdrop-blur-md font-bold w-3/4 md:w-1/2 lg:w-1/2 xl:w-1/2 rounded-full hover:rounded-2xl text-center "> 20, 21 February 2025</span><br />
-      {/* <span className="text-4xl text-white border-4 border-yellow-400 p-5 w-3/4 md:w-1/2 lg:w-1/2 xl:w-1/2 hover:rounded-full rounded-2xl text-center "> MARK YOUR CALENDER A DAY FILLED WITH FUN LAUGHTER AND MEMORIES TO CHERISH</span>
-     */}  </div>
+     
+       </div>
+     
       <Carousel />
     </div>
   );

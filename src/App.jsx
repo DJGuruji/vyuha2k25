@@ -15,19 +15,19 @@ import TicketAlumni from "./pages/TicketAlumni";
 import TicketOthers from "./pages/TicketOthers";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import EventDetails from "./pages/EventDetails";
 
 import bg1 from "../src/img/bg6.jpeg";
 import bg2 from "../src/img/bg2.jpeg";
 import bg3 from "../src/img/bg1.jpeg";
-//import bg4 from "../src/img/bg2.jpeg";
 import bg5 from "../src/img/bg3.jpeg";
 import bg6 from "../src/img/bg4.jpeg";
-import bg7 from "../src/img/bg5.jpeg";
 
 
 
 
-const bgImages = [bg1, bg2,bg3, bg5,bg6,bg7];
+
+const bgImages = [bg1, bg2,bg3, bg5, bg6];
 
 const App = () => {
   const { user } = useAuthStore();
@@ -68,13 +68,14 @@ const App = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="relative  bg-black">
       <div
-        className={`absolute inset-0 bg-cover bg-center transition-transform duration-[2s] ease-out-in ${
+        className={`absolute  inset-0 bg-cover bg-center transition-transform duration-[2s] ease-out-in ${
           zoomOut ? "scale-[1]" : "scale-[1.5]"
         }`}
         style={{
           backgroundImage: `url(${bgImage})`,
+          backgroundRepeat: "repeat-y",
         }}
       ></div>
 
@@ -92,6 +93,7 @@ const App = () => {
             <Route path="/hackathon" element={<Hackathon />} />
             <Route path="/alumni" element={<TicketAlumni />} />
             <Route path="/other" element={<TicketOthers />} />
+            <Route path="/eventdetails" element={<EventDetails />} />
           </Routes>
         </Router>
       </div>
