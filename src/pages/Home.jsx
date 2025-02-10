@@ -3,7 +3,7 @@ import fireVideo from "../assets/fire.mp4";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Carousel from "../components/Carousel";
-import Button from "../components/Button";
+import BgVideo from "../components/BgVideo";
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen overflow-hidden flex flex-col">
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex flex-col justify-center items-center h-screen">
         <svg viewBox="0 0 1200 500" className="w-full h-auto">
           <defs>
             <mask id="text-mask">
@@ -26,7 +26,7 @@ const Home = () => {
                 x="50%"
                 y="30%"
                 textAnchor="middle"
-                className="font-black fill-white text-[16rem] md:text-[8rem] "
+                className="font-black fill-white text-[16rem] md:text-[8rem] backdrop-blur-lg "
                 data-aos="zoom-out"
               >
                 VYUHA
@@ -58,13 +58,13 @@ const Home = () => {
             </foreignObject>
           </g>
         </svg>
-     
-      </div>
-      <Button></Button>
-      <div className="flex justify-center">
+        <div className="flex justify-center">
       <span className="text-4xl text-white border-4 border-yellow-400 p-10 backdrop-blur-md font-bold w-3/4 md:w-1/2 lg:w-1/2 xl:w-1/2 rounded-full hover:rounded-2xl text-center "> 20, 21 February 2025</span><br />
      
        </div>
+      </div>
+  
+     
      
       <Carousel />
     </div>

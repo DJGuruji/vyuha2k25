@@ -16,23 +16,22 @@ import TicketOthers from "./pages/TicketOthers";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import EventDetails from "./pages/EventDetails";
-
+import BgVideo from "./components/BgVideo"
 import bg1 from "../src/img/bg6.jpeg";
 import bg2 from "../src/img/bg2.jpeg";
-import bg3 from "../src/img/bg1.jpeg";
-import bg5 from "../src/img/bg3.jpeg";
-import bg6 from "../src/img/bg4.jpeg";
+import bg3 from "../src/img/bg3.jpeg";
 
 
 
 
 
-const bgImages = [bg1, bg2,bg3, bg5, bg6];
+
+const bgImages = [bg1, bg2,bg3];
 
 const App = () => {
   const { user } = useAuthStore();
   const [bgImage, setBgImage] = useState(bg1);
-  const [navbarVisible, setNavbarVisible] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
   const [loading, setLoading] = useState(true);
   const [zoomOut, setZoomOut] = useState(false);
 
@@ -79,9 +78,11 @@ const App = () => {
         }}
       ></div>
 
-      <div className="relative z-10">
+
+      <div className="relative z-10 backdrop-blur">
         <Router>
           {navbarVisible && <Navbar />}
+      
           <Routes>
             <Route path="/login" element={user ? <Home /> : <Login />} />
             <Route path="/signup" element={user ? <Home /> : <Signup />} />

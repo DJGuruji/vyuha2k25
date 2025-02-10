@@ -43,7 +43,7 @@ const Navbar = () => {
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
       <Link to="/">
-        <img src={logo} alt="logo" className="h-12 w-12" />
+        <img src={logo} alt="logo" className="h-12 w-12 md:mr-16 lg:mr-16 xl:mr-16 " />
       </Link>
       {/* {user ? (
         <Link

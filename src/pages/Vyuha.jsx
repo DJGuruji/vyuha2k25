@@ -1,22 +1,31 @@
-import React,{useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Button.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import bgImage from "../img/bg2.jpeg"; // Update the import path if needed
 
 const Vyuha = () => {
+  const [zoomOut, setZoomOut] = useState(false);
+
   useEffect(() => {
     AOS.init({
-      duration: 2000, 
+      duration: 2000,
       easing: "ease-in-out",
-      once: true, 
+      once: true,
     });
+
+    // Background zoom-out effect
+    setTimeout(() => setZoomOut(true), 100);
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen ">
-      <div className="w-full max-w-md p-8 backdrop-blur-md rounded-xl shadow-lg" data-aos="fade-up">
-        <h2 className="text-2xl font-bold text-center text-white  mb-6">
+    <div className="relative min-h-screen flex justify-center  items-center">
+      
+
+      {/* Content Box */}
+      <div className="relative z-10 w-full max-w-md p-8 backdrop-blur-lg rounded-xl shadow-lg" data-aos="fade-up">
+        <h2 className="text-2xl font-bold text-center text-white mb-6">
           Are you an alumnus or from another college?
         </h2>
         <div className="flex justify-center">

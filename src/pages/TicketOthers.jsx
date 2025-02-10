@@ -91,7 +91,7 @@ const TicketOthers = () => {
 
   return (
     <div className="w-full h-full flex justify-center items-center p-5">
-      <div className="w-full max-w-md p-8 backdrop-blur-lg rounded-xl shadow-lg" data-aos="fade-up">
+      <div className="w-full max-w-md p-8 backdrop-blur-lg bg-slate-900 rounded-xl shadow-lg" data-aos="fade-up">
         <h2 className="text-2xl font-bold text-center text-white mb-6">
           Ticket Rate: &#8377; &nbsp;
           249 only
@@ -116,7 +116,7 @@ const TicketOthers = () => {
             value={user.name}
             onChange={handleInputChange}
             placeholder="Name"
-            className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+            className="w-full px-3 text-gray-900 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
           />
 
           {/* Mobile Number */}
@@ -129,11 +129,11 @@ const TicketOthers = () => {
             value={user.mobileNumber}
             onChange={handleInputChange}
             placeholder="Mobile Number"
-            className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+            className="w-full px-3 text-gray-900 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
           />
 
           {/* Email */}
-          <label htmlFor="email" className="block text-whitefont-semibold mb-2">
+          <label htmlFor="email" className=" block text-white font-semibold mb-2">
             Email
           </label>
           <input
@@ -142,7 +142,7 @@ const TicketOthers = () => {
             value={user.email}
             onChange={handleInputChange}
             placeholder="Email"
-            className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+            className="w-full px-3 text-gray-900 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
           />
 
           {/* College Name */}
@@ -155,7 +155,7 @@ const TicketOthers = () => {
             value={user.collegeName}
             onChange={handleInputChange}
             placeholder="College Name"
-            className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
+            className="w-full px-3 text-gray-900 py-2 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"
           />
 
           {/* Photo Proof (ID Card) */}
@@ -167,7 +167,7 @@ const TicketOthers = () => {
             name="photoProof"
             onChange={handleInputChange}
             ref={fileInputRef}
-            className="w-full mb-4"
+            className="w-full text-gray-900 mb-4"
           />
 
           {/* Payment Proof */}
@@ -179,13 +179,13 @@ const TicketOthers = () => {
             name="paymentProof"
             onChange={handleInputChange}
             ref={fileInputRef2}
-            className="w-full mb-4"
+            className="w-full text-gray-900 mb-4"
           />
 
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-500  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Submit
             </button>

@@ -47,7 +47,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="mt-20 relative w-full flex items-center justify-center py-10 min-h-screen backdrop-blur-md">
+    <div className="mt-20 relative w-full flex items-center justify-center py-10 min-h-screen ">
       <button onClick={prevSlide} className="absolute left-4 text-white text-3xl z-10">
         &#10094;
       </button>
@@ -89,7 +89,7 @@ const Carousel = () => {
           <img
             src={carouselItems[currentIndex].image}
             alt={carouselItems[currentIndex].title}
-            className="w-full h-full object-cover"
+            className="w-[full hfull object-cover"
           />
 
          

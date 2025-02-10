@@ -105,7 +105,7 @@ const TicketAlumni = () => {
   return (
     <div className="w-full h-full flex justify-center items-center p-5">
       <div
-        className="w-full max-w-md p-8 backdrop-blur-lg text-white rounded-xl shadow-lg"
+        className="w-full max-w-md p-8 backdrop-blur-lg bg-slate-900 text-white rounded-xl shadow-lg"
         data-aos="fade-up"
       >
         <h2 className="text-2xl font-bold text-center text-white mb-6">
@@ -133,7 +133,7 @@ const TicketAlumni = () => {
             value={user.name}
             onChange={handleInputChange}
             placeholder="Full Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring focus:ring-blue-200 mb-4"
           />
 
           <label
@@ -148,7 +148,7 @@ const TicketAlumni = () => {
             value={user.mobileNumber}
             onChange={handleInputChange}
             placeholder="Mobile Number"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
+            className="w-full px-3 py-2 border text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
           />
 
        
@@ -161,7 +161,7 @@ const TicketAlumni = () => {
             value={user.email}
             onChange={handleInputChange}
             placeholder="Email"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
+            className="w-full px-3 py-2 border text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
           />
 
    
@@ -177,7 +177,7 @@ const TicketAlumni = () => {
             value={user.collegeName}
             onChange={handleInputChange}
             placeholder="College Name"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
+            className="w-full px-3 py-2 border text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
           />
 
       
@@ -186,6 +186,7 @@ const TicketAlumni = () => {
           </label>
           <div className="mb-4">
             <Select
+            className="text-gray-900"
               options={options}
               onChange={(selectedOption) =>
                 setUser({ ...user, branch: selectedOption.value })
@@ -205,7 +206,7 @@ const TicketAlumni = () => {
             onChange={handleInputChange}
             placeholder="YYYY"
             maxLength={4}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
+            className="w-full px-3 py-2 border text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200 mb-4"
           />
 
       
@@ -220,7 +221,7 @@ const TicketAlumni = () => {
             name="paymentProof"
             onChange={handleInputChange}
             ref={fileInputRef2}
-            className="w-full mb-4"
+            className="w-full text-gray-900 mb-4"
           />
 
           <div className="flex justify-center">
